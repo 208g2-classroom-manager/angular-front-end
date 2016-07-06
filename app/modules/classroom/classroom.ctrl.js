@@ -36,7 +36,7 @@
                         .then(
                             function(response){
                                 console.log("enroll success");
-                                console.log(classId);
+
                                 $location.path('/classroom/'+classId);
                         },
                             function(error){
@@ -60,6 +60,7 @@
                         .then(
                             function (response) {
                                 $scope.className = response.data.className;
+                                $scope.classId = response.data.classId;
                                 console.log(response.data.className);
                             },
                             function (error) {
